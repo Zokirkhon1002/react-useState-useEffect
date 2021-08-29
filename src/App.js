@@ -3,7 +3,7 @@ import "./App.css";
 import Clicker from "./components/Clicker";
 
 export default function App() {
-  const [ isClicker, setClicker ] = useState(true);
+  const [ isClicker, setClicker ] = useState(false);
 
   useEffect(() => {
     console.log('DidMount', isClicker);
