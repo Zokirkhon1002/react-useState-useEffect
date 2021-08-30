@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Clicker from "./components/Clicker";
+import UseRef from "./components/UseRef";
+import Timer from "./components/Timer";
 
 export default function App() {
-  const [ isClicker, setClicker ] = useState(false);
+  const [ isClicker, setClicker ] = useState(true);
+
 
   useEffect(() => {
     console.log('DidMount', isClicker);
@@ -15,7 +18,10 @@ export default function App() {
    <div>
      <h1>React App</h1>
      <button className="blue" onClick={() => setClicker(!isClicker)}>Toggle Clicker</button>
+     {isClicker && <Timer />}
+     {isClicker && <UseRef />}
       {isClicker && <Clicker />}
+
    </div>
  )
 }
